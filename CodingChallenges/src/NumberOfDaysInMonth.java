@@ -4,23 +4,23 @@ public class NumberOfDaysInMonth {
         } else
             if (LeapYear.isLeapYear(year) && month == 2) {return 29;} else
         {
-            int resu = 31;
+            int result;
         switch (month) {
             case 1: case 3: case 5: case 7: case 8: case 10: case 12 :
-                resu = 31;
+                result = 31;
                 break;
             case 2:
-                resu =  28;
+                result =  28;
                 break;
 
 
             //case 4: case 6: case 9: case 11:
                default:
-                resu =  30;
+                result =  30;
                 break;
 
         }
-        return resu;
+        return result;
 
 
         }
