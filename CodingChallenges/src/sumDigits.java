@@ -61,11 +61,40 @@ public class sumDigits {
         return first+last;
     }
 
+
+    public static int getEvenDigitSum (int number){
+        if (number <0 ) {return -1;}
+        int sum = 0;
+
+        // e.g. 125 -> 125 / 10 = 12 -> 12 * 10 = 120 -> 125 - 120 = 5
+
+        while (number >0 ){
+
+            // extracting least-significant digit
+            int digit = number % 10;
+            if (digit %2 ==0) {
+                sum += digit;
+            }
+
+            // drop the least-significant digit
+            number /=10; // same as number = number /10;
+
+
+        }
+
+        return sum;
+
+
+
+    }
+
     public static void main(String[] args) {
         //System.out.println("Then sum of the digits in number 125 is "+ sumaDigitos(125));
         //System.out.println("the number 121 is palindrome = " + isPalindrome(121));
         //System.out.println("the number -1221 is palindrome = " + isPalindrome(-1221));
-        System.out.println(sumFirstAndLastDigit(101));
+       // System.out.println(sumFirstAndLastDigit(101));
+        System.out.println(getEvenDigitSum(252));
+
     }
 
 }
