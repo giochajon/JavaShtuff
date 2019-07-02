@@ -164,6 +164,19 @@ public class sumDigits {
     }
 
 
+    public static boolean hasSameLastDigit (int first, int second, int third ) {
+        if ((first <= 10 || first > 1000) || (second <= 10 || second > 1000) || (second <= 10 || third > 1000)) {return false;}
+
+        int a =  first % 10;
+        int b =  second % 10;
+        int c =  first % 10;
+
+        if (((a - b == 0) || (b - c ==0)) || ((a - c ==0) || (c - b ==0) )) {return true;}
+
+        return false;
+    }
+
+
     public static void main(String[] args) {
         //System.out.println("Then sum of the digits in number 125 is "+ sumaDigitos(125));
         //System.out.println("the number 121 is palindrome = " + isPalindrome(121));
@@ -171,8 +184,8 @@ public class sumDigits {
        // System.out.println(sumFirstAndLastDigit(101));
         //System.out.println(getEvenDigitSum(252));
         //System.out.println(hasDigit(2,25));
-        System.out.println(hasSharedDigit(12,13));
-
+        //System.out.println(hasSharedDigit(12,13));
+        System.out.println("same digit:" + hasSameLastDigit(41,22,71));
     }
 
 }
