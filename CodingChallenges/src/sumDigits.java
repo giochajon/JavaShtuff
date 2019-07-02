@@ -188,6 +188,36 @@ public class sumDigits {
     return i;
     }
 
+    public static void printFactors(int i) {
+        if (i < 1) {
+            System.out.println("Invalid Value");
+        } else {
+            for (int fun = 1; fun <= i; fun++) {
+                if (i % fun == 0) {
+                    System.out.println(fun);
+                }
+
+            }
+        }
+    }
+
+    public static boolean isPerfectNumber(int number){
+        if (number < 1) {
+            return false;
+
+        } else {
+            int tot = 0;
+            for (int fun = 1; fun < number; fun++) {
+                //System.out.println("tot"+tot+"fun"+fun );
+                if (number % fun == 0) {
+                    tot =tot + fun;
+                }
+            }
+            //System.out.println("tot"+tot+"number"+number );
+            if (tot == number) {return true;}
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         //System.out.println("Then sum of the digits in number 125 is "+ sumaDigitos(125));
@@ -199,6 +229,8 @@ public class sumDigits {
         //System.out.println(hasSharedDigit(12,13));
         //System.out.println("same digit:" + hasSameLastDigit(41,22,71));
         //System.out.println(getGreatestCommonDivisor(81,153));
+        //printFactors(6);
+        System.out.println(isPerfectNumber(28));
     }
 
 }
