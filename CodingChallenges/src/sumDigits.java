@@ -177,6 +177,18 @@ public class sumDigits {
     }
 
 
+    public static int getGreatestCommonDivisor (int first, int second) {
+    if ((first < 10 ) || (second < 10 )) {return -1;}
+    int i;
+    int min;
+    if (first < second) {min = first; } else {min = second;}
+    for ( i = min ; i > 1; i--) {
+        if (( first % i ==0 ) && (second % i ==0)) {return i ;}
+    }
+    return i;
+    }
+
+
     public static void main(String[] args) {
         //System.out.println("Then sum of the digits in number 125 is "+ sumaDigitos(125));
         //System.out.println("the number 121 is palindrome = " + isPalindrome(121));
@@ -185,7 +197,8 @@ public class sumDigits {
         //System.out.println(getEvenDigitSum(252));
         //System.out.println(hasDigit(2,25));
         //System.out.println(hasSharedDigit(12,13));
-        System.out.println("same digit:" + hasSameLastDigit(41,22,71));
+        //System.out.println("same digit:" + hasSameLastDigit(41,22,71));
+        //System.out.println(getGreatestCommonDivisor(81,153));
     }
 
 }
