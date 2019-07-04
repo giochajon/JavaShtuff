@@ -165,16 +165,22 @@ public class sumDigits {
 
 
     public static boolean hasSameLastDigit (int first, int second, int third ) {
-        if ((first <= 10 || first > 1000) || (second <= 10 || second > 1000) || (second <= 10 || third > 1000)) {return false;}
+        if (!isValid(first) || !isValid(second) || !isValid(third)) {return false;}
 
         int a =  first % 10;
         int b =  second % 10;
-        int c =  first % 10;
+        int c =  third % 10;
 
-        if (((a - b == 0) || (b - c ==0)) || ((a - c ==0) || (c - b ==0) )) {return true;}
+        if ((a - b == 0) || (b - c ==0) || (a - c ==0) ) {return true;}
 
         return false;
     }
+
+    public static boolean isValid (int numero){
+        if (numero >= 10 && numero <= 1000) {return true;}
+        return false;
+    }
+
 
 
     public static int getGreatestCommonDivisor (int first, int second) {
@@ -227,10 +233,10 @@ public class sumDigits {
         //System.out.println(getEvenDigitSum(252));
         //System.out.println(hasDigit(2,25));
         //System.out.println(hasSharedDigit(12,13));
-        //System.out.println("same digit:" + hasSameLastDigit(41,22,71));
+        System.out.println("same digit:" + hasSameLastDigit(22,23,34));
         //System.out.println(getGreatestCommonDivisor(81,153));
         //printFactors(6);
-        System.out.println(isPerfectNumber(28));
+        //System.out.println(isPerfectNumber(28));
     }
 
 }
