@@ -58,6 +58,11 @@ public class Wall {
     }
 
 
+
+
+
+
+
     public static void main(String[] args) {
         Wall a = new Wall(-1.25,-1.25);
         System.out.println(a.width+" and "+a.height);
