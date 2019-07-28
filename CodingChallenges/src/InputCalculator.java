@@ -57,9 +57,9 @@ public static void inputThenPrintSumAndAverage() {
     Scanner scanner = new Scanner(System.in);
     //System.out.println("Enter Numbers:");
     int myInput = 0;
-    float avg = 0;
-    int sum = 0;
-    int count = 0;
+    double avg = 0;
+    double sum = 0;
+    double count = 0;
     do {
 
         try{
@@ -69,8 +69,8 @@ public static void inputThenPrintSumAndAverage() {
 
             //System.out.println("Value parsed :"+i);
             count = count + 1;
-            sum = sum + (int) i;
-            avg =  Math.round ((float)(sum/count));
+            sum = sum +  i;
+            avg =  (sum/count);
 
 
 
@@ -81,7 +81,8 @@ public static void inputThenPrintSumAndAverage() {
 
     }
     while (myInput !=0);
-    System.out.println("SUM = " +sum +" AVG = " + (int)avg );
+    System.out.println("SUM = " +(int)sum +" AVG = " + Math.round(avg) );
+
     scanner.close();
 
 }
